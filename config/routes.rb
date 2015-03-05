@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  root "weather#index"
+
+  get "/weather/index" => "weather#index"
+
+  get "/weather/show", to: "weather#show"
+
+  get "weather/search", to: "weather#search"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
